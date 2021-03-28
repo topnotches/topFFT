@@ -1,0 +1,25 @@
+clc; clear all; close all;
+format long ;
+N = 2^16;
+
+nshift = 16;
+
+n = 0:N-1;
+
+z = exp(i*(n/N)*2*pi);
+
+c = floor(2^(nshift).*imag(z));
+
+re = floor(2^(nshift).*real(z));
+
+plot(re)
+
+
+fid = fopen( 'real.txt', 'wt' );
+fid = fopen( '', 'wt' );
+
+for ii = 2:N/4
+    
+fprintf( de2bi(), ", ");
+end
+fclose(fid);
